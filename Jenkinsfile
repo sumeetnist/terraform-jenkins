@@ -17,12 +17,22 @@ pipeline {
                     }
                 }
             }
-        stage('Terraform plan') {
+        stage('Terraform init') {
             steps {
                  script{
                         dir("terraform")
                         {
                             sh 'terraform -version'
+                            sh 'terraform init'
+                        }
+                    }
+                }
+            }
+        stage('Terraform plan') {
+            steps {
+                 script{
+                        dir("terraform")
+                        {
                             sh 'terraform plan'
                         }
                     }
