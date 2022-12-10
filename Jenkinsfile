@@ -28,17 +28,17 @@ pipeline {
                     }
                 }
             }
-        stage('Terraform plan') {
-            steps {
-                 script{
-                        dir("terraform")
-                        {
-                            sh "terraform plan -input=false "
+        //stage('Terraform plan') {
+          //  steps {
+            //     script{
+              //          dir("terraform")
+                //        {
+                            //sh "terraform plan -input=false "
                             //sh 'terraform show -no-color tfplan > tfplan.txt'
-                        }
-                    }
-                }
-            }
+                  //      }
+                    //}
+                //}
+           // }
         stage('Terraform approval') {
            steps {
                script {
