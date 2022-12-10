@@ -12,7 +12,7 @@ pipeline {
                  script{
                         dir("terraform")
                         {
-                            git "https://github.com/vkseth/terraform-jenkins.git"
+                            git branch: 'main', url: 'https://github.com/vkseth/terraform-jenkins.git'
                         }
                     }
                 }
