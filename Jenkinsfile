@@ -34,7 +34,7 @@ pipeline {
                         dir("terraform")
                         {
                             sh "terraform plan -input=false -out tfplan.txt "
-                            //sh 'terraform show -no-color tfplan > tfplan.txt'
+                            sh 'terraform show -no-color tfplan > tfplan.txt'
                         }
                     }
                 }
