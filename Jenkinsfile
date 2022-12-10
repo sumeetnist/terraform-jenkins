@@ -23,7 +23,7 @@ pipeline {
                         dir("terraform")
                         {
                             sh 'terraform -version'
-                            sh 'terraform -plan'
+                            sh 'terraform plan'
                         }
                     }
                 }
